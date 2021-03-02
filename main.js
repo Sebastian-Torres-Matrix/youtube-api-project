@@ -33,30 +33,26 @@ $(document).ready(function () {
 
             var thumb = item.snippet.thumbnails.medium.url;
             var title = item.snippet.title;
-            var desc = item.snippet.description.substring(0, 100);
+            var desc = item.snippet.description.substring(0, 80);
             var vid = item.snippet.resourceId.videoId;
 
 
-
             $('main').append(`
-							<article class="item" data-key="${vid}">
-
-								<img src="${thumb}" alt="thumbnail image" class="thumb">
-								<div class="details">
-									<h4>${title}</h4>
-									<p>${desc}</p>
-								</div>
-
-							</article>
-						`);
+                                        <article class="item" data-key="${vid}">
+            
+                                            <img src="${thumb}" alt="thumbnail image" class="thumb">
+                                            <div class="details">
+                                                <h4>${title}</h4>
+                                                <p>${desc}</p>
+                                            </div>
+            
+                                        </article>
+                                    `);
         });
     }
-
     // CLICK EVENT
     $('main').on('click', 'article', function () {
         var id = $(this).attr('data-key');
         mainVid(id);
     });
-
-
 })
