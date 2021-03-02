@@ -1,12 +1,14 @@
-@mixin font-base {
+h4,
+p {
   padding: 0;
   margin: 0;
   line-height: 1.3;
   font-weight: 600;
 }
 
-h4 {
-  @include font-base;
+p {
+  color: grey;
+  font-size: 0.7rem;
 }
 
 body {
@@ -29,7 +31,7 @@ section {
 }
 
 section {
-  top: 70px;
+  top: 80px;
 }
 
 .logo {
@@ -43,8 +45,22 @@ main {
 
 article {
   display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+article:hover {
+  border: 2px solid #ff9999;
 }
 
 .thumbnail {
   height: 70px;
+  border-radius: 4px;
+}
+
+.details {
+  padding: 8px 22px;
 }
